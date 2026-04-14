@@ -1,36 +1,34 @@
 import { useState } from "react";
 
-const PASSWORD = "ji";
+const PASSWORD = "gom2026";
 
 function PasswordGate({ children }) {
-  const [authed, setAuthed] = useState(() => sessionStorage.getItem("bwpp_auth") === "1");
+  const [authed, setAuthed] = useState(() => sessionStorage.getItem("ji_auth") === "1");
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
+
   if (authed) return children;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (input === PASSWORD) {
-      sessionStorage.setItem("bwpp_auth", "1");
+      sessionStorage.setItem("ji_auth", "1");
       setAuthed(true);
     } else {
       setError(true);
       setInput("");
     }
   };
+
   return (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh", background: "#060f1a" }}>
       <div style={{ background: "#091929", border: "1px solid #1e3a5f", borderRadius: 12, padding: "40px 48px", minWidth: 320, textAlign: "center" }}>
         <div style={{ fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 8 }}>Jimmy Gomez Dashboard</div>
         <div style={{ fontSize: 14, color: "#64748b", marginBottom: 24 }}>Enter password to continue</div>
         <form onSubmit={handleSubmit}>
-          <input
-            type="password"
-            value={input}
-            onChange={(e) => { setInput(e.target.value); setError(false); }}
-            placeholder="Password"
-            autoFocus
-            style={{ width: "100%", padding: "10px 14px", borderRadius: 8, border: error ? "1px solid #ef4444" : "1px solid #1e3a5f", background: "#060f1a", color: "#fff", fontSize: 15, marginBottom: 8, boxSizing: "border-box", outline: "none" }}
-          />
+          <input type="password" value={input} onChange={(e) => { setInput(e.target.value); setError(false); }}
+            placeholder="Password" autoFocus
+            style={{ width: "100%", padding: "10px 14px", borderRadius: 8, border: error ? "1px solid #ef4444" : "1px solid #1e3a5f", background: "#060f1a", color: "#fff", fontSize: 15, marginBottom: 8, boxSizing: "border-box", outline: "none" }} />
           {error && <div style={{ color: "#ef4444", fontSize: 13, marginBottom: 8 }}>Incorrect password</div>}
           <button type="submit" style={{ width: "100%", padding: "10px 0", borderRadius: 8, background: "#1d4ed8", color: "#fff", border: "none", fontSize: 15, fontWeight: 600, cursor: "pointer", marginTop: 4 }}>Enter</button>
         </form>
@@ -39,420 +37,267 @@ function PasswordGate({ children }) {
   );
 }
 
-// ─── DATA (auto-generated — update weekly) ────────────────────────────────────
+// ─── CLIENT CONFIG ────────────────────────────────────────────────────────────
 const CLIENT = {
-  "name": "Jimmy Gomez",
-  "cycle": "2025–2026",
-  "lastUpdated": "April 14, 2026",
-  "reportWeek": "Week of 4/13",
-  "reportMonth": "April 2026",
-  "reportQuarter": "Q2 2026"
+  name: "Jimmy Gomez",
+  cycle: "2025–2026",
+  lastUpdated: "April 14, 2026",
+  reportWeek: "Current Week",
+  reportMonth: "April 2026",
+  reportQuarter: "Q2 2026",
 };
+
+// ─── EMAIL DATA ───────────────────────────────────────────────────────────────
 const EMAIL_TOP_LINES = [
   {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/6",
-    "period": "monthly",
-    "recipients": 1811,
-    "opens": 130,
-    "openRate": 19.1,
-    "clicks": 502,
-    "clickRate": 0.1,
-    "unsubs": 0
+    "subject": "JG_EM_FR_250905_ALL_1_1",
+    "sendDate": "9/5/25",
+    "period": "weekly",
+    "recipients": 12934,
+    "opens": 900,
+    "openRate": 7.0,
+    "clicks": 217,
+    "clickRate": 1.7,
+    "unsubs": 126
   },
   {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 30,
-    "openRate": 23.3,
-    "clicks": 229,
-    "clickRate": 0.1,
-    "unsubs": 0
+    "subject": "JG_EM_FR_250905_ALL_1_1",
+    "sendDate": "9/5/25",
+    "period": "weekly",
+    "recipients": 12934,
+    "opens": 661,
+    "openRate": 5.1,
+    "clicks": 176,
+    "clickRate": 1.4,
+    "unsubs": 77
   },
   {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 40,
-    "openRate": 24.6,
-    "clicks": 249,
-    "clickRate": 0.1,
-    "unsubs": 0
+    "subject": "JG_EM_FR_250905_ALL_1_1",
+    "sendDate": "9/5/25",
+    "period": "weekly",
+    "recipients": 12934,
+    "opens": 944,
+    "openRate": 7.3,
+    "clicks": 172,
+    "clickRate": 1.3,
+    "unsubs": 103
   },
   {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 12,
-    "openRate": 20.7,
-    "clicks": 229,
+    "subject": "JG_EM_FR_250905_ALL_1_1",
+    "sendDate": "9/5/25",
+    "period": "weekly",
+    "recipients": 392,
+    "opens": 25,
+    "openRate": 6.6,
+    "clicks": 0,
     "clickRate": 0.0,
     "unsubs": 0
   },
   {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 57,
-    "openRate": 22.4,
-    "clicks": 225,
-    "clickRate": 0.1,
-    "unsubs": 0
+    "subject": "JG_EM_FR_250908_ALL_1_2",
+    "sendDate": "9/8/25",
+    "period": "weekly",
+    "recipients": 9192,
+    "opens": 504,
+    "openRate": 5.5,
+    "clicks": 141,
+    "clickRate": 1.5,
+    "unsubs": 52
   },
   {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 43,
-    "openRate": 24.1,
-    "clicks": 221,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 63,
-    "openRate": 25.7,
-    "clicks": 245,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 47,
-    "openRate": 25.9,
-    "clicks": 254,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 46,
-    "openRate": 23.5,
-    "clicks": 239,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 28,
-    "openRate": 23.0,
-    "clicks": 238,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 44,
-    "openRate": 22.0,
-    "clicks": 214,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 45,
-    "openRate": 18.2,
-    "clicks": 283,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 36,
-    "openRate": 17.3,
-    "clicks": 282,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 15,
-    "openRate": 16.7,
-    "clicks": 278,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 34,
-    "openRate": 16.3,
-    "clicks": 305,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 33,
-    "openRate": 22.4,
-    "clicks": 335,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 57,
-    "openRate": 17.9,
-    "clicks": 300,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 40,
-    "openRate": 18.1,
-    "clicks": 286,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 33,
-    "openRate": 14.2,
-    "clicks": 250,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 67,
-    "openRate": 16.8,
-    "clicks": 277,
-    "clickRate": 0.1,
-    "unsubs": 0
+    "subject": "JG_EM_FR_250908_ALL_1_2",
+    "sendDate": "9/8/25",
+    "period": "weekly",
+    "recipients": 9192,
+    "opens": 466,
+    "openRate": 5.1,
+    "clicks": 80,
+    "clickRate": 0.9,
+    "unsubs": 47
   }
 ];
+
 const EMAIL_MONTHLY_SUMMARY = {
-  "sends": 847,
-  "totalRecipients": 1180013,
-  "avgOpenRate": 22.8,
-  "avgClickRate": 0.1,
-  "totalUnsubs": 0
+  sends: 10,
+  totalRecipients: 82454,
+  avgOpenRate: 6.0,
+  avgClickRate: 1.1,
+  totalUnsubs: 533,
 };
-const EMAIL_QUARTERLY_SUMMARY = {
-  "sends": 847,
-  "totalRecipients": 1180013,
-  "avgOpenRate": 22.8,
-  "avgClickRate": 0.1,
-  "totalUnsubs": 0
-};
+const EMAIL_QUARTERLY_SUMMARY = EMAIL_MONTHLY_SUMMARY;
+
+// ─── LIST SIZE ────────────────────────────────────────────────────────────────
 const LIST_SIZE = [
   {
-    "label": "30-Day Openers",
-    "key": "30DO",
+    "label": "Update segment sizes weekly. Yellow cells are manual inputs.",
+    "key": "UPDATE",
     "current": 0,
     "prev": 0,
-    "change": 0.0,
+    "change": 0,
     "goal": null
   },
   {
-    "label": "90-Day Openers",
-    "key": "90DO",
+    "label": "Segment Name",
+    "key": "SEGMEN",
     "current": 0,
     "prev": 0,
-    "change": 0.0,
+    "change": 0,
     "goal": null
   },
   {
-    "label": "180-Day Openers",
-    "key": "180DO",
+    "label": "Email \u2014 180DO",
+    "key": "EMAIL\u2014",
     "current": 0,
     "prev": 0,
-    "change": 0.0,
+    "change": 0,
     "goal": null
   },
   {
-    "label": "Monthly New to List",
-    "key": "1MNTL",
+    "label": "Email \u2014 90DO",
+    "key": "EMAIL\u2014",
     "current": 0,
     "prev": 0,
-    "change": 0.0,
+    "change": 0,
     "goal": null
   },
   {
-    "label": "All Subscribed",
-    "key": "ALL",
+    "label": "Email \u2014 365 SF/Local",
+    "key": "EMAIL\u2014",
     "current": 0,
     "prev": 0,
-    "change": 0.0,
+    "change": 0,
+    "goal": null
+  },
+  {
+    "label": "Texting \u2014 NTL",
+    "key": "TEXTIN",
+    "current": 0,
+    "prev": 0,
+    "change": 0,
     "goal": null
   }
 ];
+
+// ─── FINANCES ─────────────────────────────────────────────────────────────────
 const FINANCES = [
   {
-    "period": "Mar 2026",
+    "period": "2026-03",
     "type": "month",
     "totalActBlue": 31848.14,
     "digitalRaise": 0.0
   },
   {
-    "period": "Apr 2026",
+    "period": "2026-04",
     "type": "month",
     "totalActBlue": 1167.15,
     "digitalRaise": 0.0
-  },
-  {
-    "period": "Q2 2026 (QTD)",
-    "type": "qtd",
-    "totalActBlue": 33015.29,
-    "digitalRaise": 0.0
   }
 ];
-const DIGITAL_PCT_MIN = 25;
-const DIGITAL_PCT_MAX = 30;
+const DIGITAL_PCT_MIN = 10;
+const DIGITAL_PCT_MAX = 15;
+
 const FINANCE_MONTHLY = {
-  "period": "April 2026 (MTD)",
-  "totalActBlue": 1167.15,
-  "digitalRaise": 0.0,
-  "projection": 1517
+  period: "April 2026",
+  totalActBlue: 1167.15,
+  digitalRaise: 0.0,
+  projection: 16508,
 };
 const FINANCE_QUARTERLY = {
-  "period": "Q2 2026 (QTD)",
-  "totalActBlue": 33015.29,
-  "digitalRaise": 0.0,
-  "projection": 37968
+  period: "Q2 2026",
+  totalActBlue: 33015.29,
+  digitalRaise: 0.0,
+  projection: 37968,
 };
+
+// ─── ACQUISITION ROI ──────────────────────────────────────────────────────────
 const ACQUISITION_ROI = [];
+
+// ─── TEXTING ROI ──────────────────────────────────────────────────────────────
 const TEXTING_ROI = [
   {
-    "campaign": "JG EOQ #2",
-    "sendDate": "9/29",
-    "period": "monthly",
-    "sent": 995,
-    "delivered": 995,
+    "campaign": "Campaign Name",
+    "sendDate": "Send Date",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
     "responses": 0,
-    "optOuts": 97,
+    "optOuts": 0,
     "donations": 0,
-    "raised": 0
+    "raised": 0.0
+  },
+  {
+    "campaign": "JG EOQ #2",
+    "sendDate": "2025-09-29",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 5500,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 995.0
   },
   {
     "campaign": "251208 Housing not hate",
-    "sendDate": "12/8",
-    "period": "monthly",
-    "sent": 6302,
-    "delivered": 6302,
-    "responses": 0,
-    "optOuts": 572,
+    "sendDate": "2025-12-08",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 6380,
+    "optOuts": 0,
     "donations": 0,
-    "raised": 0
+    "raised": 6302.0
   },
   {
     "campaign": "02/01/26 to JG",
-    "sendDate": "2/1",
-    "period": "monthly",
-    "sent": 8005,
-    "delivered": 8005,
-    "responses": 0,
-    "optOuts": 376,
+    "sendDate": "2026-02-01",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 9081,
+    "optOuts": 0,
     "donations": 0,
-    "raised": 0
+    "raised": 8005.0
   },
   {
     "campaign": "JG_EOQ_260331",
-    "sendDate": "3/31",
-    "period": "monthly",
-    "sent": 3831,
-    "delivered": 3831,
-    "responses": 0,
-    "optOuts": 180,
+    "sendDate": "2026-03-31",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 4000,
+    "optOuts": 0,
     "donations": 0,
-    "raised": 0
+    "raised": 3831.0
+  },
+  {
+    "campaign": "TOTALS",
+    "sendDate": "",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 0,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 0.0
   }
 ];
+
+// ─── ADS ──────────────────────────────────────────────────────────────────────
 const META_ADS = [];
 const GOOGLE_ADS = [];
+
+// ─── GROWTH CALC ──────────────────────────────────────────────────────────────
 const GROWTH_CALC = [
-  {
-    "metric": "List Growth Rate (MoM)",
-    "value": "—",
-    "benchmark": "+1.5%",
-    "status": "above"
-  },
-  {
-    "metric": "Email Churn Rate",
-    "value": "—",
-    "benchmark": "<0.15%",
-    "status": "above"
-  },
-  {
-    "metric": "Avg Open Rate (30d)",
-    "value": "22.8%",
-    "benchmark": ">14% = Strong",
-    "status": "above"
-  },
-  {
-    "metric": "Avg Click Rate (30d)",
-    "value": "0.1%",
-    "benchmark": ">3.0%",
-    "status": "below"
-  },
-  {
-    "metric": "SMS Opt-Out Rate",
-    "value": "—",
-    "benchmark": "<0.20%",
-    "status": "above"
-  },
-  {
-    "metric": "Digital % of ActBlue",
-    "value": "0.0%",
-    "benchmark": "25–30%",
-    "status": "below"
-  }
+  { metric: "Avg Open Rate", value: "6.0%", benchmark: ">14% = Strong", status: "below" },
+  { metric: "Avg Click Rate", value: "1.1%", benchmark: ">3.0%", status: "below" },
+  { metric: "Digital % of ActBlue", value: "0.0%", benchmark: "10–15%", status: "below" },
 ];
+
 const DEFAULT_HIGHLIGHTS = [
-  "Dashboard auto-generated for Jimmy Gomez — April 14, 2026",
-  "Update this section with key insights for Week of 4/13",
-  "Add notable email performance observations here",
-  "Add texting campaign highlights here",
-  "Add fundraising milestones or anomalies here"
+  "Dashboard initialized with data through April 14, 2026",
+  "Digital raise: $0 (0.0% of total ActBlue)",
+  "Average email open rate: 6.0%",
+  "Total ActBlue raised: $33,015",
 ];
 
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
@@ -466,20 +311,22 @@ function openRateColor(r) {
   return "#f87171";
 }
 function openRateBadge(r) {
-  if (r >= 14) return { label: "Strong",  color: "#4ade80", bg: "#052e16", border: "#166534" };
+  if (r >= 14) return { label: "Strong", color: "#4ade80", bg: "#052e16", border: "#166534" };
   if (r >= 10) return { label: "Average", color: "#fbbf24", bg: "#2d1f00", border: "#92400e" };
-  return           { label: "Low",     color: "#f87171", bg: "#3f0f0f", border: "#7f1d1d" };
+  return { label: "Low", color: "#f87171", bg: "#3f0f0f", border: "#7f1d1d" };
 }
 function digitalPctStatus(p) {
-  if (p >= DIGITAL_PCT_MIN && p <= DIGITAL_PCT_MAX) return { color: "#4ade80", label: "On Target",    bg: "#052e16", border: "#166534" };
-  if (p > DIGITAL_PCT_MAX)                          return { color: "#60a5fa", label: "Above Target", bg: "#0c1f3f", border: "#1d4ed8" };
-  return                                                   { color: "#f87171", label: "Below Target", bg: "#3f0f0f", border: "#7f1d1d" };
+  if (p >= DIGITAL_PCT_MIN && p <= DIGITAL_PCT_MAX) return { color: "#4ade80", label: "On Target", bg: "#052e16", border: "#166534" };
+  if (p > DIGITAL_PCT_MAX) return { color: "#60a5fa", label: "Above Target", bg: "#0c1f3f", border: "#1d4ed8" };
+  return { color: "#f87171", label: "Below Target", bg: "#3f0f0f", border: "#7f1d1d" };
 }
+
 function Delta({ val }) {
   if (val == null) return null;
   const up = val >= 0;
   return <span style={{ color: up ? "#22c55e" : "#ef4444", fontWeight: 600, fontSize: 13 }}>{up ? "▲" : "▼"} {Math.abs(val).toFixed(2)}%</span>;
 }
+
 function GoalBar({ current, goal }) {
   if (!goal) return null;
   const pct = Math.min((current / goal) * 100, 100);
@@ -492,6 +339,7 @@ function GoalBar({ current, goal }) {
     </div>
   );
 }
+
 function DigitalPctBar({ pct }) {
   const status = digitalPctStatus(pct);
   const barWidth = Math.min(pct / 50 * 100, 100);
@@ -516,11 +364,10 @@ function DigitalPctBar({ pct }) {
   );
 }
 
-// ─── PERIOD TOGGLE ────────────────────────────────────────────────────────────
 function PeriodToggle({ active, onChange }) {
   const options = [
-    { id: "weekly",    label: "Weekly",    sub: CLIENT.reportWeek },
-    { id: "monthly",   label: "Monthly",   sub: CLIENT.reportMonth },
+    { id: "weekly", label: "Weekly", sub: CLIENT.reportWeek },
+    { id: "monthly", label: "Monthly", sub: CLIENT.reportMonth },
     { id: "quarterly", label: "Quarterly", sub: CLIENT.reportQuarter },
   ];
   return (
@@ -529,7 +376,7 @@ function PeriodToggle({ active, onChange }) {
         <button key={o.id} onClick={() => onChange(o.id)} style={{
           background: active === o.id ? "#1d4ed8" : "#091929",
           border: `1px solid ${active === o.id ? "#3b82f6" : "#1e3a5f"}`,
-          borderRadius: 8, padding: "8px 18px", cursor: "pointer", textAlign: "left", transition: "all 0.15s",
+          borderRadius: 8, padding: "8px 18px", cursor: "pointer", textAlign: "left",
         }}>
           <div style={{ fontSize: 13, fontWeight: 600, color: active === o.id ? "#fff" : "#94a3b8", fontFamily: "'Sora', sans-serif" }}>{o.label}</div>
           <div style={{ fontSize: 11, color: active === o.id ? "#93c5fd" : "#475569" }}>{o.sub}</div>
@@ -539,7 +386,6 @@ function PeriodToggle({ active, onChange }) {
   );
 }
 
-// ─── SUMMARY CALLOUT ──────────────────────────────────────────────────────────
 function SummaryCallout({ label, children }) {
   return (
     <div style={{ background: "#091929", border: "1px solid #1e3a5f", borderRadius: 12, padding: "16px 22px", marginBottom: 20 }}>
@@ -548,6 +394,7 @@ function SummaryCallout({ label, children }) {
     </div>
   );
 }
+
 function SummaryItem({ label, value, color }) {
   return (
     <div>
@@ -557,12 +404,11 @@ function SummaryItem({ label, value, color }) {
   );
 }
 
-// ─── SECTION ──────────────────────────────────────────────────────────────────
 function Section({ title, subtitle, children }) {
   return (
     <div style={{ marginBottom: 48 }}>
       <div style={{ marginBottom: 20 }}>
-        <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 22, fontWeight: 700, color: "#e2e8f0", margin: 0, letterSpacing: "-0.2px" }}>{title}</h2>
+        <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 22, fontWeight: 700, color: "#e2e8f0", margin: 0 }}>{title}</h2>
         {subtitle && <p style={{ margin: "4px 0 0", fontSize: 13, color: "#64748b" }}>{subtitle}</p>}
       </div>
       {children}
@@ -570,11 +416,10 @@ function Section({ title, subtitle, children }) {
   );
 }
 
-// ─── TABLE ────────────────────────────────────────────────────────────────────
 function Table({ headers, rows, alignRight = [] }) {
   return (
     <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #1e3a5f" }}>
-      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, fontFamily: "'Inter', sans-serif" }}>
+      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
         <thead>
           <tr style={{ background: "#0c2340" }}>
             {headers.map((h, i) => (
@@ -596,7 +441,6 @@ function Table({ headers, rows, alignRight = [] }) {
   );
 }
 
-// ─── STAT CARD ────────────────────────────────────────────────────────────────
 function StatCard({ label, value, sub, accent }) {
   return (
     <div style={{ background: "#091929", border: "1px solid #1e3a5f", borderRadius: 12, padding: "20px 24px", flex: "1 1 180px", minWidth: 160 }}>
@@ -607,7 +451,6 @@ function StatCard({ label, value, sub, accent }) {
   );
 }
 
-// ─── EDITABLE HIGHLIGHTS ──────────────────────────────────────────────────────
 function EditableHighlights({ highlights, onChange }) {
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(highlights.join("\n"));
@@ -619,15 +462,17 @@ function EditableHighlights({ highlights, onChange }) {
         <div style={{ fontSize: 12, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.06em" }}>Highlights</div>
         {editing ? (
           <div style={{ display: "flex", gap: 8 }}>
-            <button onClick={save} style={{ background: "#1d4ed8", color: "#fff", border: "none", borderRadius: 6, padding: "5px 14px", fontSize: 12, cursor: "pointer", fontFamily: "'Inter', sans-serif", fontWeight: 600 }}>Save</button>
-            <button onClick={cancel} style={{ background: "#1e3a5f", color: "#94a3b8", border: "none", borderRadius: 6, padding: "5px 14px", fontSize: 12, cursor: "pointer", fontFamily: "'Inter', sans-serif" }}>Cancel</button>
+            <button onClick={save} style={{ background: "#1d4ed8", color: "#fff", border: "none", borderRadius: 6, padding: "5px 14px", fontSize: 12, cursor: "pointer", fontWeight: 600 }}>Save</button>
+            <button onClick={cancel} style={{ background: "#1e3a5f", color: "#94a3b8", border: "none", borderRadius: 6, padding: "5px 14px", fontSize: 12, cursor: "pointer" }}>Cancel</button>
           </div>
         ) : (
-          <button onClick={() => { setDraft(highlights.join("\n")); setEditing(true); }} style={{ background: "transparent", color: "#60a5fa", border: "1px solid #1e4976", borderRadius: 6, padding: "5px 14px", fontSize: 12, cursor: "pointer", fontFamily: "'Inter', sans-serif" }}>Edit</button>
+          <button onClick={() => { setDraft(highlights.join("\n")); setEditing(true); }} style={{ background: "transparent", color: "#60a5fa", border: "1px solid #1e4976", borderRadius: 6, padding: "5px 14px", fontSize: 12, cursor: "pointer" }}>&#9998; Edit</button>
         )}
       </div>
       {editing ? (
-        <textarea value={draft} onChange={e => setDraft(e.target.value)} style={{ width: "100%", background: "#060f1a", border: "1px solid #1e4976", borderRadius: 8, color: "#e2e8f0", padding: "12px", fontSize: 13, fontFamily: "'Inter', sans-serif", lineHeight: 1.9, resize: "vertical", minHeight: 140, outline: "none", boxSizing: "border-box" }} placeholder="One highlight per line..." />
+        <textarea value={draft} onChange={e => setDraft(e.target.value)}
+          style={{ width: "100%", background: "#060f1a", border: "1px solid #1e4976", borderRadius: 8, color: "#e2e8f0", padding: "12px", fontSize: 13, lineHeight: 1.9, resize: "vertical", minHeight: 140, outline: "none", boxSizing: "border-box" }}
+          placeholder="One highlight per line..." />
       ) : (
         <ul style={{ margin: 0, paddingLeft: 20, color: "#94a3b8", fontSize: 13, lineHeight: 2.1 }}>
           {highlights.map((h, i) => <li key={i}>{h}</li>)}
@@ -637,45 +482,38 @@ function EditableHighlights({ highlights, onChange }) {
   );
 }
 
-// ─── NAV ──────────────────────────────────────────────────────────────────────
 const NAV_ITEMS = [
-  { id: "overview",    label: "Digital Overview" },
-  { id: "email",       label: "Email" },
-  { id: "listsize",    label: "List Size" },
-  { id: "finances",    label: "Finances" },
-  { id: "acquisition", label: "Acquisition ROI" },
-  { id: "texting",     label: "Texting ROI" },
-  { id: "ads",         label: "Ad Reporting" },
-  { id: "growth",      label: "Growth" },
+  { id: "overview", label: "Digital Overview" },
+  { id: "email", label: "Email" },
+  { id: "listsize", label: "List Size" },
+  { id: "finances", label: "Finances" },
+  { id: "texting", label: "Texting ROI" },
+  { id: "ads", label: "Ad Reporting" },
+  { id: "growth", label: "Growth" },
 ];
 
-// ─── MAIN APP ─────────────────────────────────────────────────────────────────
 export default function Dashboard() {
   const [active, setActive] = useState("overview");
   const [period, setPeriod] = useState("weekly");
   const [highlights, setHighlights] = useState(DEFAULT_HIGHLIGHTS);
+
   const scrollTo = (id) => {
     setActive(id);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const emailRows   = period === "weekly"    ? EMAIL_TOP_LINES.filter(r => r.period === "weekly")
-                    : period === "monthly"   ? EMAIL_TOP_LINES.filter(r => ["weekly","monthly"].includes(r.period))
-                    : EMAIL_TOP_LINES;
-  const textingRows = TEXTING_ROI.filter(r => period === "weekly" ? r.period === "weekly" : period === "monthly" ? ["weekly","monthly"].includes(r.period) : true);
-  const metaRows    = META_ADS.filter(r => period === "weekly" ? r.period === "weekly" : period === "monthly" ? ["weekly","monthly"].includes(r.period) : true);
-  const googleRows  = GOOGLE_ADS.filter(r => period === "weekly" ? r.period === "weekly" : period === "monthly" ? ["weekly","monthly"].includes(r.period) : true);
-  const acquisRows  = ACQUISITION_ROI.filter(r => period === "weekly" ? r.period === "weekly" : period === "monthly" ? ["weekly","monthly"].includes(r.period) : true);
-  const financeRows = period === "quarterly" ? FINANCES : FINANCES.filter(r => r.type === "month");
+  const emailRows = EMAIL_TOP_LINES.slice(0, period === "weekly" ? 5 : 10);
+  const textingRows = TEXTING_ROI;
+  const metaRows = META_ADS;
+  const googleRows = GOOGLE_ADS;
 
-  const totalActBlue = FINANCES.filter(r => r.type === "month").reduce((s, r) => s + r.totalActBlue, 0);
-  const totalDigital = FINANCES.filter(r => r.type === "month").reduce((s, r) => s + r.digitalRaise, 0);
-  const overallPct   = totalActBlue > 0 ? (totalDigital / totalActBlue) * 100 : 0;
+  const financeRows = FINANCES;
+  const totalActBlue = FINANCES.reduce((s, r) => s + r.totalActBlue, 0);
+  const totalDigital = FINANCES.reduce((s, r) => s + r.digitalRaise, 0);
+  const overallPct = totalActBlue > 0 ? (totalDigital / totalActBlue) * 100 : 0;
   const overallStatus = digitalPctStatus(overallPct);
 
   const periodLabel = period === "weekly" ? CLIENT.reportWeek : period === "monthly" ? CLIENT.reportMonth : CLIENT.reportQuarter;
-
-  const initials = CLIENT.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
 
   return (
     <PasswordGate>
@@ -692,10 +530,9 @@ export default function Dashboard() {
           .badge-below { background: #3f0f0f; color: #f87171; border: 1px solid #7f1d1d; }
         `}</style>
 
-        {/* HEADER */}
         <header style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(6,15,26,0.96)", backdropFilter: "blur(12px)", borderBottom: "1px solid #1e3a5f", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <div style={{ width: 36, height: 36, borderRadius: 8, background: "linear-gradient(135deg,#1d4ed8,#3b82f6)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 800, fontFamily: "'Sora', sans-serif", color: "#fff", flexShrink: 0 }}>{initials}</div>
+            <div style={{ width: 36, height: 36, borderRadius: 8, background: "linear-gradient(135deg,#1d4ed8,#3b82f6)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 800, fontFamily: "'Sora', sans-serif", color: "#fff" }}>{"JI"}</div>
             <div>
               <div style={{ fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: 15, color: "#e2e8f0", lineHeight: 1.1 }}>{CLIENT.name}</div>
               <div style={{ fontSize: 11, color: "#475569", letterSpacing: "0.06em" }}>{CLIENT.cycle} CAMPAIGN REPORT</div>
@@ -704,7 +541,7 @@ export default function Dashboard() {
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <div style={{ display: "flex", background: "#091929", border: "1px solid #1e3a5f", borderRadius: 8, overflow: "hidden" }}>
               {["weekly","monthly","quarterly"].map(p => (
-                <button key={p} onClick={() => setPeriod(p)} style={{ background: period === p ? "#1d4ed8" : "transparent", border: "none", color: period === p ? "#fff" : "#64748b", padding: "6px 14px", fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "'Inter', sans-serif", textTransform: "capitalize", transition: "all 0.15s" }}>{p}</button>
+                <button key={p} onClick={() => setPeriod(p)} style={{ background: period === p ? "#1d4ed8" : "transparent", border: "none", color: period === p ? "#fff" : "#64748b", padding: "6px 14px", fontSize: 12, fontWeight: 600, cursor: "pointer", textTransform: "capitalize" }}>{p}</button>
               ))}
             </div>
             <div style={{ fontSize: 12, color: "#475569" }}>Updated <span style={{ color: "#60a5fa" }}>{CLIENT.lastUpdated}</span></div>
@@ -712,84 +549,40 @@ export default function Dashboard() {
         </header>
 
         <div style={{ display: "flex" }}>
-          {/* SIDEBAR */}
           <nav style={{ width: 200, flexShrink: 0, position: "sticky", top: 64, height: "calc(100vh - 64px)", overflowY: "auto", borderRight: "1px solid #1e3a5f", padding: "24px 0", background: "#07121e" }}>
             {NAV_ITEMS.map(item => (
               <div key={item.id} className="nav-item" onClick={() => scrollTo(item.id)} style={{ padding: "9px 24px", fontSize: 13, fontWeight: active === item.id ? 600 : 400, color: active === item.id ? "#60a5fa" : "#64748b", borderLeft: active === item.id ? "2px solid #3b82f6" : "2px solid transparent" }}>
                 {item.label}
               </div>
             ))}
-            <div style={{ margin: "24px 24px 0", padding: "12px 16px", background: "#0c2340", borderRadius: 8, border: "1px solid #1e3a5f" }}>
-              <div style={{ fontSize: 10, color: "#475569", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Viewing</div>
-              <div style={{ fontSize: 12, color: "#94a3b8", textTransform: "capitalize", fontWeight: 600 }}>{period}</div>
-              <div style={{ fontSize: 11, color: "#475569", marginTop: 2 }}>{periodLabel}</div>
-            </div>
           </nav>
 
-          <main style={{ flex: 1, padding: "40px 48px", maxWidth: "calc(100% - 200px)", overflowX: "hidden" }}>
+          <main style={{ flex: 1, padding: "40px 48px", maxWidth: "calc(100% - 200px)" }}>
 
-            {/* DIGITAL OVERVIEW */}
             <div id="overview">
               <Section title="Digital Overview" subtitle={`${periodLabel} · ${CLIENT.lastUpdated}`}>
                 <PeriodToggle active={period} onChange={setPeriod} />
-                {period === "monthly" && (
-                  <SummaryCallout label={`${CLIENT.reportMonth} — Monthly Summary`}>
-                    <SummaryItem label="Email Sends" value={EMAIL_MONTHLY_SUMMARY.sends} color="#60a5fa" />
-                    <SummaryItem label="Avg Open Rate" value={`${EMAIL_MONTHLY_SUMMARY.avgOpenRate}%`} color="#fbbf24" />
-                    <SummaryItem label="Digital Raised (MTD)" value={fmtD(FINANCE_MONTHLY.digitalRaise)} color="#4ade80" />
-                    <SummaryItem label="% to Projection" value={FINANCE_MONTHLY.projection > 0 ? `${((FINANCE_MONTHLY.totalActBlue / FINANCE_MONTHLY.projection) * 100).toFixed(1)}%` : "—"} color="#a78bfa" />
-                  </SummaryCallout>
-                )}
-                {period === "quarterly" && (
-                  <SummaryCallout label={`${CLIENT.reportQuarter} — Quarterly Summary`}>
-                    <SummaryItem label="Email Sends" value={EMAIL_QUARTERLY_SUMMARY.sends} color="#60a5fa" />
-                    <SummaryItem label="Avg Open Rate" value={`${EMAIL_QUARTERLY_SUMMARY.avgOpenRate}%`} color="#fbbf24" />
-                    <SummaryItem label="Digital Raised (QTD)" value={fmtD(FINANCE_QUARTERLY.digitalRaise)} color="#4ade80" />
-                    <SummaryItem label="Total ActBlue (QTD)" value={fmtD(FINANCE_QUARTERLY.totalActBlue)} color="#a78bfa" />
-                    <SummaryItem label="% to Q Projection" value={FINANCE_QUARTERLY.projection > 0 ? `${((FINANCE_QUARTERLY.totalActBlue / FINANCE_QUARTERLY.projection) * 100).toFixed(1)}%` : "—"} color="#fb923c" />
-                  </SummaryCallout>
-                )}
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginBottom: 24 }}>
-                  <StatCard label="Total Subscribers" value={fmt(LIST_SIZE.find(r => r.key === "ALL")?.current || 0)} sub={LIST_SIZE.find(r => r.key === "ALL")?.goal ? `Goal: ${fmt(LIST_SIZE.find(r => r.key === "ALL").goal)}` : null} />
+                  <StatCard label="Total ActBlue" value={fmtD(totalActBlue)} sub="All time" />
+                  <StatCard label="Digital Raised" value={fmtD(totalDigital)} sub={`${overallPct.toFixed(1)}% of ActBlue`} accent="#34d399" />
                   <StatCard label="Avg Open Rate" value={`${EMAIL_MONTHLY_SUMMARY.avgOpenRate}%`} sub="14%+ = Strong" accent="#fbbf24" />
-                  <StatCard label={period === "quarterly" ? "Digital Raised (QTD)" : "Digital Raised (MTD)"} value={period === "quarterly" ? fmtD(FINANCE_QUARTERLY.digitalRaise) : fmtD(FINANCE_MONTHLY.digitalRaise)} sub={`${((period === "quarterly" ? FINANCE_QUARTERLY.digitalRaise / (FINANCE_QUARTERLY.totalActBlue || 1) : FINANCE_MONTHLY.digitalRaise / (FINANCE_MONTHLY.totalActBlue || 1)) * 100).toFixed(1)}% of ActBlue`} accent="#34d399" />
-                  <StatCard label="SMS List" value={fmt(LIST_SIZE.find(r => r.key === "180DO")?.current || 0)} sub="180-Day Openers" accent="#fb923c" />
-                  <StatCard label="Total Ad Spend" value={fmtD(META_ADS.reduce((s,r) => s + (r.spend||0), 0) + GOOGLE_ADS.reduce((s,r) => s + (r.spend||0), 0))} sub="Meta + Google" accent="#f472b6" />
+                  <StatCard label="Email Sends" value={EMAIL_MONTHLY_SUMMARY.sends} sub="Total tracked" accent="#a78bfa" />
                 </div>
                 <EditableHighlights highlights={highlights} onChange={setHighlights} />
               </Section>
             </div>
 
-            {/* EMAIL */}
             <div id="email">
-              <Section title="Email" subtitle="Broadcast performance from EveryAction">
+              <Section title="Email" subtitle="Broadcast performance">
                 <PeriodToggle active={period} onChange={setPeriod} />
-                {period === "monthly" && (
-                  <SummaryCallout label={`${CLIENT.reportMonth} — Email Summary`}>
-                    <SummaryItem label="Total Sends" value={EMAIL_MONTHLY_SUMMARY.sends} />
-                    <SummaryItem label="Total Recipients" value={fmt(EMAIL_MONTHLY_SUMMARY.totalRecipients)} />
-                    <SummaryItem label="Avg Open Rate" value={`${EMAIL_MONTHLY_SUMMARY.avgOpenRate}%`} color={openRateColor(EMAIL_MONTHLY_SUMMARY.avgOpenRate)} />
-                    <SummaryItem label="Avg Click Rate" value={`${EMAIL_MONTHLY_SUMMARY.avgClickRate}%`} color="#a78bfa" />
-                    <SummaryItem label="Total Unsubs" value={EMAIL_MONTHLY_SUMMARY.totalUnsubs} color="#f87171" />
-                  </SummaryCallout>
-                )}
-                {period === "quarterly" && (
-                  <SummaryCallout label={`${CLIENT.reportQuarter} — Email Summary`}>
-                    <SummaryItem label="Total Sends" value={EMAIL_QUARTERLY_SUMMARY.sends} />
-                    <SummaryItem label="Total Recipients" value={fmt(EMAIL_QUARTERLY_SUMMARY.totalRecipients)} />
-                    <SummaryItem label="Avg Open Rate" value={`${EMAIL_QUARTERLY_SUMMARY.avgOpenRate}%`} color={openRateColor(EMAIL_QUARTERLY_SUMMARY.avgOpenRate)} />
-                    <SummaryItem label="Avg Click Rate" value={`${EMAIL_QUARTERLY_SUMMARY.avgClickRate}%`} color="#a78bfa" />
-                    <SummaryItem label="Total Unsubs" value={EMAIL_QUARTERLY_SUMMARY.totalUnsubs} color="#f87171" />
-                  </SummaryCallout>
-                )}
                 {emailRows.length > 0 ? (
                   <Table
-                    headers={["Subject Line", "Date", "Recipients", "Opens", "Open Rate", "Rating", "Clicks", "Click Rate", "Unsubs"]}
+                    headers={["Subject / Email Name", "Date", "Recipients", "Opens", "Open Rate", "Rating", "Clicks", "Click Rate", "Unsubs"]}
                     alignRight={[2,3,4,6,7,8]}
                     rows={emailRows.map(r => {
                       const badge = openRateBadge(r.openRate);
                       return [
-                        <span style={{ color: "#e2e8f0" }}>{r.subject}</span>,
+                        <span style={{ color: "#e2e8f0", maxWidth: 280, display: "block", overflow: "hidden", textOverflow: "ellipsis" }}>{r.subject}</span>,
                         r.sendDate, fmt(r.recipients), fmt(r.opens),
                         <span style={{ color: openRateColor(r.openRate), fontWeight: 600 }}>{fmtP(r.openRate)}</span>,
                         <span style={{ padding: "2px 9px", borderRadius: 10, fontSize: 11, fontWeight: 600, background: badge.bg, color: badge.color, border: `1px solid ${badge.border}` }}>{badge.label}</span>,
@@ -797,4 +590,126 @@ export default function Dashboard() {
                       ];
                     })}
                   />
-  
+                ) : <div style={{ color: "#475569", fontSize: 13, padding: "20px 0" }}>No email data available yet.</div>}
+              </Section>
+            </div>
+
+            <div id="listsize">
+              <Section title="List Size" subtitle="Subscriber segment counts">
+                {LIST_SIZE.length > 0 ? (
+                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                    {LIST_SIZE.map(row => (
+                      <div key={row.key} style={{ background: "#091929", border: "1px solid #1e3a5f", borderRadius: 12, padding: "18px 24px", display: "flex", alignItems: "center", gap: 24 }}>
+                        <div style={{ minWidth: 160 }}>
+                          <div style={{ fontSize: 11, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.06em" }}>{row.key}</div>
+                          <div style={{ fontFamily: "'Sora', sans-serif", fontWeight: 600, fontSize: 14, color: "#e2e8f0", marginTop: 2 }}>{row.label}</div>
+                        </div>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ fontSize: 28, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: "#60a5fa", lineHeight: 1 }}>{fmt(row.current)}</div>
+                          <div style={{ fontSize: 12, color: "#475569", marginTop: 2 }}>prev: {fmt(row.prev)} &nbsp; <Delta val={row.change} /></div>
+                          <GoalBar current={row.current} goal={row.goal} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : <div style={{ color: "#475569", fontSize: 13, padding: "20px 0" }}>No list size data available yet.</div>}
+              </Section>
+            </div>
+
+            <div id="finances">
+              <Section title="Finances" subtitle={`ActBlue fundraising — digital target: ${DIGITAL_PCT_MIN}–${DIGITAL_PCT_MAX}%`}>
+                <PeriodToggle active={period} onChange={setPeriod} />
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginBottom: 20 }}>
+                  <StatCard label="Total ActBlue" value={fmtD(totalActBlue)} accent="#60a5fa" />
+                  <StatCard label="Digital Raise" value={fmtD(totalDigital)} sub="Email + SMS" accent="#4ade80" />
+                  <div style={{ background: "#091929", border: "1px solid #1e3a5f", borderRadius: 12, padding: "20px 24px", flex: "2 1 260px" }}>
+                    <div style={{ fontSize: 11, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>Digital % of ActBlue</div>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
+                      <div style={{ fontSize: 26, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: overallStatus.color }}>{overallPct.toFixed(1)}%</div>
+                      <span style={{ padding: "2px 9px", borderRadius: 10, fontSize: 11, fontWeight: 600, background: overallStatus.bg, color: overallStatus.color, border: `1px solid ${overallStatus.border}` }}>{overallStatus.label}</span>
+                    </div>
+                    <DigitalPctBar pct={overallPct} />
+                  </div>
+                </div>
+                <Table
+                  headers={["Period", "Total ActBlue", "Digital Raise", "Digital %", "vs Target"]}
+                  alignRight={[1,2,3]}
+                  rows={financeRows.map(r => {
+                    const pct = r.totalActBlue > 0 ? (r.digitalRaise / r.totalActBlue) * 100 : 0;
+                    const s = digitalPctStatus(pct);
+                    return [
+                      r.period,
+                      <span style={{ color: "#60a5fa" }}>{fmtD(r.totalActBlue)}</span>,
+                      <span style={{ color: "#4ade80" }}>{fmtD(r.digitalRaise)}</span>,
+                      <span style={{ color: s.color, fontWeight: 600 }}>{pct.toFixed(1)}%</span>,
+                      <span style={{ padding: "2px 9px", borderRadius: 10, fontSize: 11, fontWeight: 600, background: s.bg, color: s.color, border: `1px solid ${s.border}` }}>{s.label}</span>,
+                    ];
+                  })}
+                />
+              </Section>
+            </div>
+
+            <div id="texting">
+              <Section title="Texting ROI" subtitle="SMS campaign performance">
+                {textingRows.length > 0 ? (
+                  <Table
+                    headers={["Campaign", "Date", "Delivered", "Link Clicks", "Revenue"]}
+                    alignRight={[2,3,4]}
+                    rows={textingRows.map(r => [
+                      r.campaign, r.sendDate, fmt(r.delivered), fmt(r.responses),
+                      <span style={{ color: "#4ade80" }}>{fmtD(r.raised)}</span>,
+                    ])}
+                  />
+                ) : <div style={{ color: "#475569", fontSize: 13, padding: "20px 0" }}>No texting data available yet.</div>}
+              </Section>
+            </div>
+
+            <div id="ads">
+              <Section title="Ad Reporting" subtitle="Meta Ads + Google Ads">
+                {googleRows.length > 0 ? (
+                  <>
+                    <div style={{ marginBottom: 8, fontSize: 11, color: "#475569", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 600 }}>Google Ads</div>
+                    <Table
+                      headers={["Campaign", "Spend", "Impressions", "Clicks", "CTR", "CPC", "Conversions", "Cost/Conv."]}
+                      alignRight={[1,2,3,4,5,6,7]}
+                      rows={googleRows.map(r => [
+                        r.campaign, fmtD(r.spend), fmt(r.impressions), fmt(r.clicks),
+                        fmtP(r.ctr), fmtD(r.cpc), fmt(r.conversions), fmtD(r.costPerConv),
+                      ])}
+                    />
+                  </>
+                ) : <div style={{ color: "#475569", fontSize: 13, padding: "20px 0" }}>No ad data available yet.</div>}
+              </Section>
+            </div>
+
+            <div id="growth">
+              <Section title="Growth" subtitle="Key metrics vs benchmarks">
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {GROWTH_CALC.map((row, i) => (
+                    <div key={i} style={{ background: "#091929", border: "1px solid #1e3a5f", borderRadius: 10, padding: "14px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <div style={{ fontSize: 14, color: "#cbd5e1" }}>{row.metric}</div>
+                      <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+                        <div style={{ textAlign: "right" }}>
+                          <div style={{ fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: 18, color: "#60a5fa" }}>{row.value}</div>
+                          <div style={{ fontSize: 11, color: "#475569" }}>Benchmark: {row.benchmark}</div>
+                        </div>
+                        <span className={row.status === "above" ? "badge-above" : "badge-below"} style={{ padding: "4px 10px", borderRadius: 20, fontSize: 11, fontWeight: 600, whiteSpace: "nowrap" }}>
+                          {row.status === "above" ? "✓ On Track" : "↓ Needs Attention"}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Section>
+            </div>
+
+            <div style={{ borderTop: "1px solid #1e3a5f", paddingTop: 24, marginTop: 24, fontSize: 12, color: "#334155", textAlign: "center" }}>
+              Report generated for {CLIENT.name} · {CLIENT.cycle} · {CLIENT.lastUpdated} · Confidential
+            </div>
+
+          </main>
+        </div>
+      </div>
+    </PasswordGate>
+  );
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 // ─── DATA (auto-generated — update weekly) ────────────────────────────────────
+// Pipeline run: 2026-04-15T13:50 — JI full refresh
 // Auth is handled by Vercel Edge Middleware (middleware.js) — never in source code.
 const CLIENT = {
   "name": "Jimmy Gomez",

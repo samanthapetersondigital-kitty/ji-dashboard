@@ -12,238 +12,51 @@ const CLIENT = {
 };
 const EMAIL_TOP_LINES = [
   {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/6",
+    "subject": "JG_EM_FR_90DO_260407_1_2",
+    "sendDate": "4/7",
     "period": "monthly",
-    "recipients": 1811,
-    "opens": 130,
-    "openRate": 19.1,
-    "clicks": 502,
-    "clickRate": 0.1,
+    "recipients": 7153,
+    "opens": 563,
+    "openRate": 26.4,
+    "clicks": 3407,
+    "clickRate": 7.9,
     "unsubs": 0
   },
   {
     "subject": "JG_EM_PT_90DO_260403_1_1",
     "sendDate": "4/3",
     "period": "monthly",
-    "recipients": 540,
-    "opens": 30,
-    "openRate": 23.3,
-    "clicks": 229,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 40,
+    "recipients": 7211,
+    "opens": 605,
     "openRate": 24.6,
-    "clicks": 249,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 12,
-    "openRate": 20.7,
-    "clicks": 229,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 57,
-    "openRate": 22.4,
-    "clicks": 225,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 43,
-    "openRate": 24.1,
-    "clicks": 221,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 63,
-    "openRate": 25.7,
-    "clicks": 245,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 47,
-    "openRate": 25.9,
-    "clicks": 254,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 46,
-    "openRate": 23.5,
-    "clicks": 239,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 28,
-    "openRate": 23.0,
-    "clicks": 238,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260403_1_1",
-    "sendDate": "4/3",
-    "period": "monthly",
-    "recipients": 540,
-    "opens": 44,
-    "openRate": 22.0,
-    "clicks": 214,
-    "clickRate": 0.1,
+    "clicks": 3295,
+    "clickRate": 8.4,
     "unsubs": 0
   },
   {
     "subject": "JG_EM_PT_90DO_260402_1_1",
     "sendDate": "4/2",
     "period": "monthly",
-    "recipients": 780,
-    "opens": 45,
-    "openRate": 18.2,
-    "clicks": 283,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 36,
-    "openRate": 17.3,
-    "clicks": 282,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 15,
-    "openRate": 16.7,
-    "clicks": 278,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 34,
-    "openRate": 16.3,
-    "clicks": 305,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 33,
-    "openRate": 22.4,
-    "clicks": 335,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 57,
-    "openRate": 17.9,
-    "clicks": 300,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 40,
-    "openRate": 18.1,
-    "clicks": 286,
-    "clickRate": 0.1,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 33,
-    "openRate": 14.2,
-    "clicks": 250,
-    "clickRate": 0.0,
-    "unsubs": 0
-  },
-  {
-    "subject": "JG_EM_PT_90DO_260402_1_1",
-    "sendDate": "4/2",
-    "period": "monthly",
-    "recipients": 780,
-    "opens": 67,
-    "openRate": 16.8,
-    "clicks": 277,
-    "clickRate": 0.1,
+    "recipients": 10413,
+    "opens": 495,
+    "openRate": 18.3,
+    "clicks": 4077,
+    "clickRate": 4.8,
     "unsubs": 0
   }
 ];
 const EMAIL_MONTHLY_SUMMARY = {
-  "sends": 847,
-  "totalRecipients": 1180013,
-  "avgOpenRate": 22.8,
-  "avgClickRate": 0.1,
+  "sends": 3,
+  "totalRecipients": 24777,
+  "avgOpenRate": 23.1,
+  "avgClickRate": 7.0,
   "totalUnsubs": 0
 };
 const EMAIL_QUARTERLY_SUMMARY = {
-  "sends": 847,
-  "totalRecipients": 1180013,
-  "avgOpenRate": 22.8,
-  "avgClickRate": 0.1,
+  "sends": 3,
+  "totalRecipients": 24777,
+  "avgOpenRate": 23.1,
+  "avgClickRate": 7.0,
   "totalUnsubs": 0
 };
 const LIST_SIZE = [
@@ -298,13 +111,13 @@ const FINANCES = [
   {
     "period": "Apr 2026",
     "type": "month",
-    "totalActBlue": 1167.15,
+    "totalActBlue": 2892.15,
     "digitalRaise": 0.0
   },
   {
     "period": "Q2 2026 (QTD)",
     "type": "qtd",
-    "totalActBlue": 33015.29,
+    "totalActBlue": 34740.29,
     "digitalRaise": 0.0
   }
 ];
@@ -312,15 +125,15 @@ const DIGITAL_PCT_MIN = 25;
 const DIGITAL_PCT_MAX = 30;
 const FINANCE_MONTHLY = {
   "period": "April 2026 (MTD)",
-  "totalActBlue": 1167.15,
+  "totalActBlue": 2892.15,
   "digitalRaise": 0.0,
-  "projection": 1517
+  "projection": 3760
 };
 const FINANCE_QUARTERLY = {
   "period": "Q2 2026 (QTD)",
-  "totalActBlue": 33015.29,
+  "totalActBlue": 34740.29,
   "digitalRaise": 0.0,
-  "projection": 37968
+  "projection": 39951
 };
 const ACQUISITION_ROI = [];
 const TEXTING_ROI = [
@@ -386,15 +199,15 @@ const GROWTH_CALC = [
   },
   {
     "metric": "Avg Open Rate (30d)",
-    "value": "22.8%",
+    "value": "23.1%",
     "benchmark": ">14% = Strong",
     "status": "above"
   },
   {
     "metric": "Avg Click Rate (30d)",
-    "value": "0.1%",
+    "value": "7.0%",
     "benchmark": ">3.0%",
-    "status": "below"
+    "status": "above"
   },
   {
     "metric": "SMS Opt-Out Rate",
